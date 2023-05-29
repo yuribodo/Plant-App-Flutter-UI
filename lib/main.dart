@@ -7,19 +7,19 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
+  // Este widget é a raiz do seu aplicativo.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Plant App',
       theme: ThemeData(
-        scaffoldBackgroundColor: kBackgroundColor,
-        primaryColor: kPrimaryColor,
-        textTheme: Theme.of(context).textTheme.apply(bodyColor: kTextColor),
+        scaffoldBackgroundColor: kBackgroundColor,  // Define a cor de fundo padrão para o aplicativo
+        primaryColor: kPrimaryColor,  // Define a cor primária para o aplicativo
+        textTheme: Theme.of(context).textTheme.apply(bodyColor: kTextColor),  // Aplica a cor de texto padrão para o aplicativo
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: HomeScreen(),
+      home: HomeScreen(),  // Define a tela inicial do aplicativo como HomeScreen
     );
   }
 }

@@ -10,16 +10,16 @@ class FeaturedPlants extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
-      scrollDirection: Axis.horizontal,
+      scrollDirection: Axis.horizontal,  // Permite a rolagem horizontal
       child: Row(
         children: <Widget>[
           FeaturePlantCard(
-            image: "assets/images/bottom_img_1.png",
-            press: () {},
+            image: "assets/images/bottom_img_1.png",  // Imagem exibida no cartão
+            press: () {},  // Função chamada quando o cartão é pressionado
           ),
           FeaturePlantCard(
-            image: "assets/images/bottom_img_2.png",
-            press: () {},
+            image: "assets/images/bottom_img_2.png",  // Imagem exibida no cartão
+            press: () {},  // Função chamada quando o cartão é pressionado
           ),
         ],
       ),
@@ -40,20 +40,20 @@ class FeaturePlantCard extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return GestureDetector(
-      onTap: press,
+      onTap: press,  // Define a função chamada quando o cartão é pressionado
       child: Container(
         margin: EdgeInsets.only(
-          left: kDefaultPadding,
-          top: kDefaultPadding / 2,
-          bottom: kDefaultPadding / 2,
+          left: kDefaultPadding,  // Define a margem esquerda do cartão
+          top: kDefaultPadding / 2,  // Define a margem superior do cartão
+          bottom: kDefaultPadding / 2,  // Define a margem inferior do cartão
         ),
-        width: size.width * 0.8,
-        height: 185,
+        width: size.width * 0.8,  // Define a largura do cartão
+        height: 185,  // Define a altura do cartão
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(10),
+          borderRadius: BorderRadius.circular(10),  // Define o raio de borda do cartão
           image: DecorationImage(
-            fit: BoxFit.cover,
-            image: AssetImage(image),
+            fit: BoxFit.cover,  // Ajusta a imagem para preencher o espaço do cartão
+            image: AssetImage(image),  // Define a imagem exibida no cartão
           ),
         ),
       ),

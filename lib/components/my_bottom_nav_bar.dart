@@ -12,35 +12,35 @@ class MyBottomNavBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.only(
-        left: kDefaultPadding * 2,
-        right: kDefaultPadding * 2,
-        bottom: kDefaultPadding,
+        left: kDefaultPadding * 2,  // Preenchimento à esquerda
+        right: kDefaultPadding * 2, // Preenchimento à direita
+        bottom: kDefaultPadding,    // Preenchimento na parte inferior
       ),
-      height: 80,
+      height: 80,                   // Altura do container
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: Colors.white,   // Cor de fundo branca
         boxShadow: [
           BoxShadow(
-            offset: Offset(0, -10),
-            blurRadius: 35,
-            color: kPrimaryColor.withOpacity(0.38),
+            offset: Offset(0, -10),                     // Deslocamento da sombra para cima
+            blurRadius: 35,                              // Raio de desfoque da sombra
+            color: kPrimaryColor.withOpacity(0.38),      // Cor da sombra com opacidade
           ),
         ],
       ),
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,  // Alinhamento uniforme dos elementos ao longo do eixo principal
         children: <Widget>[
           IconButton(
-            icon: SvgPicture.asset("assets/icons/flower.svg"),
-            onPressed: () {},
+            icon: SvgPicture.asset("assets/icons/flower.svg"),  // Ícone do botão obtido de um arquivo SVG
+            onPressed: () {},  // Função executada quando o botão é pressionado
           ),
           IconButton(
-            icon: SvgPicture.asset("assets/icons/heart-icon.svg"),
-            onPressed: () {},
+            icon: SvgPicture.asset("assets/icons/heart-icon.svg"),  // Ícone do botão obtido de um arquivo SVG
+            onPressed: () {},  // Função executada quando o botão é pressionado
           ),
           IconButton(
-            icon: SvgPicture.asset("assets/icons/user-icon.svg"),
-            onPressed: () {},
+            icon: SvgPicture.asset("assets/icons/user-icon.svg"),  // Ícone do botão obtido de um arquivo SVG
+            onPressed: () {},  // Função executada quando o botão é pressionado
           ),
         ],
       ),
